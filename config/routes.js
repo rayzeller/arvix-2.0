@@ -20,6 +20,8 @@ module.exports.routes = {
   ***************************************************************************/
 
   '/': { view: 'pages/homepage' },
+  '/authors': { view: 'pages/authors' },
+  '/new-articles': { view: 'pages/new-articles' },
 
 
   /***************************************************************************
