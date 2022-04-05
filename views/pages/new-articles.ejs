@@ -7,4 +7,5 @@
             <div class="col">Published: <%= new Date(article.publishedAt) %></div>
         </div>
     <% } %>
+    <% if (articles.length == 0) { %> <p>Querying articles....refresh in 2 seconds</p> <% } %>
 </div>

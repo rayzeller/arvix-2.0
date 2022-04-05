@@ -4,7 +4,8 @@
         <% for (let author of authors) { %>
         <div class="row">
             <div class="col"><b><%= author.fullName %></b></div>
-            <div class="col">Num Published: <%= (author.articles ?? []).length %></div>
+            <div class="col">Num Published: <%= author.articleCount %></div>
         </div>
     <% } %>
+    <% if (authors.length == 0) { %> <p>Querying authors....refresh in 10 seconds</p> <% } %>
 </div>

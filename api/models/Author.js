@@ -21,6 +21,11 @@ module.exports = {
       example: 'Ray Zeller'
     },
 
+    articleCount: {
+      type: 'number',
+      defaultsTo: 0,
+    },
+
 
     //  ╔═╗╔╦╗╔╗ ╔═╗╔╦╗╔═╗
     //  ║╣ ║║║╠╩╗║╣  ║║╚═╗
@@ -30,6 +35,7 @@ module.exports = {
     //  ╔═╗╔═╗╔═╗╔═╗╔═╗╦╔═╗╔╦╗╦╔═╗╔╗╔╔═╗
     //  ╠═╣╚═╗╚═╗║ ║║  ║╠═╣ ║ ║║ ║║║║╚═╗
     //  ╩ ╩╚═╝╚═╝╚═╝╚═╝╩╩ ╩ ╩ ╩╚═╝╝╚╝╚═╝
+    // This isn't used right now, but I was using it at one point
     articles: {
       collection: 'article',
       via: 'authors'

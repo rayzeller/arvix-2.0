@@ -42,6 +42,11 @@ module.exports = {
       console.error(error.message);
     });
 
+    // Right now, I'm "remembering" which articles were queried via the more specific data science/ machine learning / etc query
+    // In a future implementation, I might (1) figure out how to set a better sounding category or
+    // (2) Only bother to save the relevant articles in the database, removing the need for this extra query
+
+    // Update: I am no longer saving unneeded articles in the database, but I kept the comments in
     const articles = await Article.find().where({category: 'Relevant'});
     return articles;
   }
