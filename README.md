@@ -22,9 +22,8 @@ I opted to nest the 3 pages under `/pages`. That seemed like a pretty sound Sail
 
 On runtime, you will notice that the data models don't appear on first page load. This was intentional. My vision for this project involved several possiblities
 
-(1) Gradually populate Articles and Authors through a daily/hourly/weekly (frequency is arbitrary) background task
-a. the arVix API allows pagination, and up to 8000 results, so it looks like it would be possible to go through the data on our own time
-(2) Give the use the option to refresh data (refresh button in UI), but make sure to rate limit this on the API side
+- (1) Gradually populate Articles and Authors through a daily/hourly/weekly (frequency is arbitrary) background task. The arVix API allows pagination, and up to 8000 results, so it looks like it would be possible to go through the data on our own time
+- (2) Give the use the option to refresh data (refresh button in UI), but make sure to rate limit this on the API side
 
 This would allow me to bootstrap the page with an initial set of authors/articles and hopefully have a better user experience.
 
@@ -32,10 +31,9 @@ To me, "prolific" just meant highest number of articles.
 
 There were several things with data integrity and querying that I wanted to sift through at some point:
 
-(1) It appeared that authors didn't have an ID, so it made it difficult to distinguish between duplicates. I'd like to see if there's a better way to uniquify authors.
-a. I also noticed that some author's were put on papers twice. This was most likely human error, but would require some data integrity enforcement our side
-(2) I couldn't figure out how to query with completely relaxed parameters. You will notice that I included `all:a` in the author query. I imagine there is a way around this.
-(3) It is possible to query for something like "Data Science OR Machine Learning OR Therapy", but I couldn't tell which results matched which parts of that query. This affected the way I saved Articles to the database. If we wanted to show ONLY articles that matched that query, we'd need to make them (in my case I used a category field), but we need a way to be more specific. I was hoping I could fine tune the `category` at some point to something like `Data Science`, etc.
+- (1) It appeared that authors didn't have an ID, so it made it difficult to distinguish between duplicates. I'd like to see if there's a better way to uniquify authors. I also noticed that some author's were put on papers twice. This was most likely human error, but would require some data integrity enforcement our side
+- (2) I couldn't figure out how to query with completely relaxed parameters. You will notice that I included `all:a` in the author query. I imagine there is a way around this.
+- (3) It is possible to query for something like "Data Science OR Machine Learning OR Therapy", but I couldn't tell which results matched which parts of that query. This affected the way I saved Articles to the database. If we wanted to show ONLY articles that matched that query, we'd need to make them (in my case I used a category field), but we need a way to be more specific. I was hoping I could fine tune the `category` at some point to something like `Data Science`, etc.
 
 My goal with the `helpers` was to treat them like a `service`, which I would use in RoR to contain most of my business logic. This seemed like it was a Sails coding convention.
 
