@@ -31,7 +31,7 @@ To me, "prolific" just meant highest number of articles.
 
 There were several things with data integrity and querying that I wanted to sift through at some point:
 
-- (1) It appeared that authors didn't have an ID, so it made it difficult to distinguish between duplicates. I'd like to see if there's a better way to uniquify authors. I also noticed that some author's were put on papers twice. This was most likely human error, but would require some data integrity enforcement our side
+- (1) It appeared that authors didn't have an ID, so it made it difficult to distinguish between duplicates. I'd like to see if there's a better way to uniquify authors. I also noticed that some authors were put on papers twice. This was most likely human error, but would require some data integrity enforcement our side
 - (2) I couldn't figure out how to query with completely relaxed parameters. You will notice that I included `all:a` in the author query. I imagine there is a way around this.
 - (3) It is possible to query for something like "Data Science OR Machine Learning OR Therapy", but I couldn't tell which results matched which parts of that query. This affected the way I saved Articles to the database. If we wanted to show ONLY articles that matched that query, we'd need to make them (in my case I used a category field), but we need a way to be more specific. I was hoping I could fine tune the `category` at some point to something like `Data Science`, etc.
 
