@@ -2,6 +2,16 @@
 
 a [Sails v1](https://sailsjs.com) application
 
+## Run this APP
+
+```
+ npm install sails -g
+ sails lift
+
+```
+
+http://localhost:1337/
+
 ## Notes
 
 First of all, I have almost no experience in Python or NodeJS. I would have chosen Ruby on Rails, so I will use be using RoR conventions as a reference when explaining my decisions.
