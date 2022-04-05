@@ -23,7 +23,7 @@ I opted to nest the 3 pages under `/pages`. That seemed like a pretty sound Sail
 On runtime, you will notice that the data models don't appear on first page load. This was intentional. My vision for this project involved several possiblities
 
 - (1) Gradually populate Articles and Authors through a daily/hourly/weekly (frequency is arbitrary) background task. The arVix API allows pagination, and up to 8000 results, so it looks like it would be possible to go through the data on our own time
-- (2) Give the use the option to refresh data (refresh button in UI), but make sure to rate limit this on the API side
+- (2) Give the user the option to refresh data (refresh button in UI), but make sure to rate limit this on the API side
 
 This would allow me to bootstrap the page with an initial set of authors/articles and hopefully have a better user experience.
 
