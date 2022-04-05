@@ -1,2 +1,10 @@
-// psychiatry, therapy, data science, machine learning
-// http://export.arxiv.org/api/query?search_query=all:psychiatry+OR+all:therapy+OR+all:machine+learning+OR+all:data+science&sortBy=submittedDate&sortOrder=descending
+<div class="container">
+    <a target="_blank" href="./"><-</a>
+    <h1>Here are some relevant articles:</h1>
+        <% for (let article of articles) { %>
+        <div class="row">
+            <div class="col"><b><%= article.title %></b></div>
+            <div class="col">Published: <%= new Date(article.publishedAt) %></div>
+        </div>
+    <% } %>
+</div>

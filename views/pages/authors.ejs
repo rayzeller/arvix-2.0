@@ -1,3 +1,10 @@
-// articles over last 6 months, sorted with newest, most prolific first
-
-// http://export.arxiv.org/api/query?&sortBy=submittedDate&sortOrder=descending&max_results=100
+<div class="container">
+    <a target="_blank" href="./"><-</a>
+    <h1>Here are some relevant authors:</h1>
+        <% for (let author of authors) { %>
+        <div class="row">
+            <div class="col"><b><%= author.fullName %></b></div>
+            <div class="col">Num Published: <%= (author.articles ?? []).length %></div>
+        </div>
+    <% } %>
+</div>
